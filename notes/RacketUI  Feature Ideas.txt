@@ -1,0 +1,13 @@
+RaketUI Feature Ideas:
+
+- Add multiple items at one time (another button)
+- automatically place cursor in first blank box ( when something is added, have 
+  the first box automatically selected (for after ability to add multiple 
+  items at once))
+- automatically close (exit) first raketui when another one attempts to open
+- stop the web application when the racket file stops running - detect when the 
+  racket program is stopped.
+- Make it look prettier (css for colors, etc.) (I wonder if there is a way to make the
+  desktop background the background of the application, for lols)
+
+[DONE]- have "remove this entry" and "load/apply" on a blank entry give an error

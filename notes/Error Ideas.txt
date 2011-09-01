@@ -1,0 +1,55 @@
+Correct Formatt:
+------------------------------------------------------------------
+
+(require (planet "main.rkt" ("nah22" "racketui.plt" 1 5)))
+
+(web-launch "*Appropriate Application Name*"
+ (function "*Program Description*"
+   (*Name of function to apply* ["*input param label*" *input param type*]
+				[*more input params*]
+					.
+					.
+					.
+                                -> ["*result param label*" *result param type*])))
+
+
+
+Errors When Not in a Correct Formatt:
+------------------------------------------------------------------
+
+Problem: ommited string after web-launch
+Error given: "function: this function is not defined in: function"
+More Helpful error: "no application name defined"
+
+Problem: omited function portion
+Error Given: "encryptFile: unexpected start of specification in: encryptFile"
+More Helpful Error: no program description
+
+Problem omited string after function
+Errror given: "encryptFile: problem 1 in: (encryptFile ("Input file" filename) 
+		("Output file name" string+) ("Secret key" number) 
+		("Uppercase?" boolean) -> ("Encrypted file" filename))"
+More Helpful Error: no program description
+
+Problem: Parameter type omited (encryptFile ["*"])
+Error Given: "?: expected a pair of a label and a type specification surrounded by 
+		parens instead of ("Secret key") in: ("Secret key")"
+More Helpful Error: no parameter type given
+
+Problem: Parameter string omited (encryptFile [*])
+Error Given: "filename: expected a pair of a label and a type specification 
+		surrounded by parens instead of (filename) in: (filename)"
+More Helpful Error: No parameter name given.
+
+Problem: switched parameter label and type [* "*"]
+Error Given: "filename: expected a pair of a label and a type specification 
+		surrounded by parens instead of (filename "Input file") in: 
+		(filename "Input file")"
+More Helpful Error: parameters should follow the formatt: [label type]
+
+Problem: no result parameter given (forgot the "->" or result perameter)
+Error Given: "?: expected a pair of a label and a type specification surrounded by 
+		parens instead of ("Encrypted file" filename) in: 
+		("Encrypted file" filename)"
+More Helpful error: Result parameter needed
+
